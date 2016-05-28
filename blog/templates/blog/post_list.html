@@ -1,10 +1,21 @@
 <html>
-    <head>
-        <title>Seafaring Journal</title>
-    </head>
-    <body>
-        <h1>Seafaring Journal</h1>
-        <h2>Obsrvations from the water</h2>
-        <p>Welcome to my blog</p>
-    </body>
+  <head>
+    <title>Seafaring Journal</title>
+  </head>
+  <body>
+    <div>
+      <h1>Seafaring Journal</h1>
+      <h2>Obsrvations from the water</h2>
+      <p>Welcome to my blog</p>
+      </div>
+      <div>
+        {% for post in posts %}
+          <div>
+            <published: {{ post.published_date }}</p>
+              <h1><a href="">{{ post.title }}</a></h1>
+              <p>{{ post.text|linebreaks }}</p>
+          </div>
+        {% endfor %}
+    </div>
+  </body>
 </html>
